@@ -9,7 +9,7 @@
 <p align="center">
   <h3 align="center">Best game EVER</h3>
   <p align="center">
-    <a href="https://webahead7.github.io/egestas/"><strong>Check our website »</strong></a>
+    <a href="https://webahead7.github.io/flags/"><strong>Check our website »</strong></a>
   </p>
 </p>
 
