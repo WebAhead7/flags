@@ -1,4 +1,4 @@
-# Guess the flah
+# Guess the flag
 
 <!-- PROJECT LOGO -->
 <br />
