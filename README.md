@@ -4,7 +4,7 @@
 <br />
 
 <p align="center">
-  <img src="https://github.com/WebAhead7/flags/blob/main/img/logo.jpg" width="400" height="400"/>
+  <img src="https://github.com/WebAhead7/flags/blob/main/img/logo.jpg" width="250" height="250"/>
 </p>
 <p align="center">
   <h3 align="center">Best game EVER</h3>
