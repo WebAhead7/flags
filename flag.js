@@ -1,6 +1,3 @@
-
-
-
 const flagsObj = {
     'CANADA': '/img/CANADA.jpg',
     'CHILE': '/img/CHILE.jpg',
@@ -23,46 +20,67 @@ const flagsObj = {
 var imgflag = document.getElementById("imgflag");
 var input = document.getElementById("input");
 var submit = document.getElementById("submit");
-let myObjKeys=Object.keys(flagsObj);
+let myObjKeys = Object.keys(flagsObj);
+
+// submit.addEventListener("click", submitMe);
+
+
+var level = 0;
+var countryName = '';
+
+
+
+function setCountry() {
+    if (level == myObjKeys.length) {
+
+        alert(' WOOOOW You Have Finished The Game ');
+
+    } else {
+
+        countryName = myObjKeys[level];
+        var srcImg = flagsObj[countryName];
+        imgflag.src = srcImg;
+
+    }
+}
+
+/* <input type="text" name="input" id="input"></input> */
 
 submit.addEventListener("click", submitMe);
 
 
-var level = 0;
-var countryName='';
+function submitMe() {
 
+    const diviHTML = document.querySelector('#divi')
+    const inputBox = document.createElement('input')
 
+    inputBox.setAttribute('type', 'text')
+    inputBox.setAttribute('name', 'input')
+    inputBox.setAttribute('id', 'input')
+    inputBox.placeholder = 'TEXT HERE!!'
 
-function setCountry(){
-    if(level == myObjKeys.length){
+    // diviHTML.appendChild(inputBox)
+    diviHTML.insertBefore(inputBox, diviHTML.children[1]);
 
-            alert(' WOOOOW You Have Finished The Game ');
-
-    }else{
-
-    countryName = myObjKeys[level];
-    var srcImg =flagsObj[countryName];
-    imgflag.src = srcImg;
-
-    }
 }
 
-function submitMe(){
 
-    if(submit.value === 'Start Game'){
-        submit.value='Submit';
-        input.style.display ='block';
-        setCountry();
-        return;
-    }
-    if(input.value.toLowerCase() === countryName.toLowerCase() ){
-        level++;
-        setCountry();
-    }else{
-        alert('Wrong !! Try Again ');
-        
-    }
+// function submitMe() {
 
-    input.value = '';
-}
+//     if (submit.value === 'Start Game') {
+//         submit.value = 'Submit';
+//         input.style.display = 'block';
+//         setCountry();
+//         return;
+//     }
+//     if (input.value.toLowerCase() === countryName.toLowerCase()) {
+//         level++;
+//         setCountry();
+//     } else {
+//         alert('Wrong !! Try Again ');
+
+//     }
+
+//     input.value = '';
+// }
 
