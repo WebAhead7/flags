@@ -1,15 +1,15 @@
-# Guess the flah
+# Guess the flag
 
 <!-- PROJECT LOGO -->
 <br />
 
 <p align="center">
-  <img src="img/flag" width="500" height="189"/>
+  <img src="https://github.com/WebAhead7/flags/blob/main/img/logo.jpg" width="250" height="250"/>
 </p>
 <p align="center">
   <h3 align="center">Best game EVER</h3>
   <p align="center">
-    <a href="https://webahead7.github.io/egestas/"><strong>Check our website »</strong></a>
+    <a href="https://webahead7.github.io/flags/"><strong>Check our website »</strong></a>
   </p>
 </p>
 
@@ -41,7 +41,7 @@ See how many US state flags you guess!
 LOVE QUIZZES?
 Featuring over 300 Flags from all over the World! – Can you guess them all?
 
-### Built With
+## Built With
 * HTML
 * CSS
 * JS
