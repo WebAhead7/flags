@@ -24,11 +24,11 @@ function setting(msg, gf) {
     var gif = document.getElementById('gif');
 
     score.textContent = obj.score;
-    username.textContent = obj.username;
-    correctanswers.textContent = obj.correctanswers;
+    username.textContent = obj.userName;
+    correctanswers.textContent = obj.numberCorrectAnswers;
 
     message.textContent = msg;
-    gif.setAttribute('src', gf)
+    gif.setAttribute('src',"img/"+ gf)
 
 }
 
