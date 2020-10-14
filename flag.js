@@ -2,21 +2,25 @@
 
 const flagsObj = {
     'CANADA': 'img/CANADA.jpg',
-    'CHILE': 'img/CHILE.jpg',
+    'UNITEDSTATES': 'img/UNITEDSTATES.jpg',
+    'TURKEY': 'img/TURKEY.jpg',
+    'ISRAEL': 'img/ISRAEL.jpg',
+    'ITALY': 'img/ITALY.jpg',
+    // 'CHILE': 'img/CHILE.jpg',
+    // 'NEW ZEALAND': 'img/NEWZEALAND.jpg',
+    // 'MACAU': 'img/MACAU.jpg',
+    // 'YEMEN': 'img/YEMEN.jpg',
     // 'CHINA': 'img/CHINA.jpg',
+    // 'IRAQ': 'img/IRAQ.jpg',
     // 'COLOMBIA': 'img/COLOMBIA.jpg',
     // 'EGYPT': 'img/EGYPT.jpg',
     // 'IRAN': 'img/IRAN.jpg',
-    // 'ISRAEL': 'img/ISRAEL.jpg',
-    // 'ITALY': 'img/ITALY.jpg',
     // 'JAPAN': 'img/JAPAN.jpg',
     // 'JORDAN': 'img/JORDAN.jpg',
     // 'LEBANON': 'img/LEBANON.jpg',
     // 'SAUDI ARABIA': 'img/SAUDIARABIA.jpg',
     // 'SPAIN': 'img/SPAIN.jpg',
-    // 'SUDAN': 'img/SUDAN.jpg',
-    // 'TURKEY': 'img/TURKEY.jpg',
-    // 'UNITEDSTATES': 'img/UNITEDSTATES.jpg'
+    // 'SUDAN': 'img/SUDAN.jpg'
 }
 
 var imgflag = document.getElementById("imgflag");
@@ -35,13 +39,13 @@ skipperButton.style.display = 'none';
 var userNameInout = document.getElementById("username");
 
 submit.addEventListener("click", submitMe);
-skipperButton.addEventListener("click",skipQuestion);
+skipperButton.addEventListener("click", skipQuestion);
 
-var score = 0 ;
+var score = 0;
 var level = 0;
 var countryName = '';
-var wrongAnswer = -5 ;
-var correctAnswer = 10 ;
+var wrongAnswer = -5;
+var correctAnswer = 10;
 var userName = '';
 
 
@@ -73,19 +77,19 @@ function submitMe() {
         submit.textContent = 'Submit';
         input.style.display = 'block';
         scoreText.style.display = 'block';
-        skipperButton.style.display= 'block';
+        skipperButton.style.display = 'block';
         userNameInout.style.display = 'none';
-        userName=userNameInout.textContent;
+        userName = userNameInout.textContent;
         setCountry();
 
     } else {
         if (input.value.toLowerCase() === countryName.toLowerCase()) {
             level++;
-            score+=correctAnswer;
+            score += correctAnswer;
             setCountry();
 
         } else {
-            score+=wrongAnswer;
+            score += wrongAnswer;
             alert('Wrong !! Try Again ');
 
         }
@@ -94,8 +98,6 @@ function submitMe() {
     scoreText.textContent = " Your Score : " + (score);
     input.value = '';
 }
-
-<<<<<<< HEAD
 
 // Creating an input box  under the image  in//
 
@@ -117,9 +119,7 @@ function submitMe() {
 
 // }
 
-=======
-function skipQuestion(){
+function skipQuestion() {
     level++;
     setCountry();
 }
->>>>>>> 7500386cee20c9f22539f2357065319e0f979946
