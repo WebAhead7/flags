@@ -23,7 +23,7 @@ header .header-brand {
     text-transform: uppercase;
     display: block;
     /*making it a block will make it easier to style afterwards*/
-    margin: 0 auto;
+    margin: 0px auto;
     text-align: center;
     padding: 20px 0;
 }
@@ -59,7 +59,7 @@ header nav ul li a {
         line-height: 30px;
         padding: 0 20px 0px 40px;
         border-right: 3px solid #111;
-        float: left;
+        /* float: left; */
     }
     header nav ul {
         margin: 25px 0px 0px 20px;
@@ -235,6 +235,7 @@ small {
 
 .failed {
     color: red;
+<<<<<<< HEAD
     font-size: 30px;
     mix-blend-mode: difference;
     text-shadow: 2px 2px 8px #111;
@@ -244,4 +245,10 @@ small {
     color: lightgreen;
     font-size: 30px;
     text-shadow: 2px 2px 8px #111;
+=======
+}
+
+.pass {
+    color: green;
+>>>>>>> a404eaa360996edd8e8e347060df3d1b4300630e
 }
