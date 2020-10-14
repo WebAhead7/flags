@@ -59,7 +59,7 @@ header nav ul li a {
         line-height: 30px;
         padding: 0 20px 0px 40px;
         border-right: 3px solid #111;
-        /* float: left; */
+        float: left;
     }
     header nav ul {
         margin: 25px 0px 0px 20px;
@@ -175,6 +175,12 @@ header nav ul li a {
     font-size: 30px;
     margin: 0px;
 }
+.container h3 {
+    font-size: 40px;
+    margin: 0px;
+    font-family: 'Cormorant Garamond', serif;
+
+}
 
 button {
     font-family: 'Secular One', sans-serif;
@@ -232,14 +238,14 @@ small {
 }
 
 .failed {
-    color: red;
+    color: rgb(243, 0, 0);
     font-size: 30px;
     mix-blend-mode: difference;
-    text-shadow: 2px 2px 8px #111;
+    /* text-shadow: 2px 2px 8px #111; */
 }
 
 .pass {
     color: lightgreen;
     font-size: 30px;
-    text-shadow: 2px 2px 8px #111;
+    /* text-shadow: 2px 2px 8px #111; */
 }
