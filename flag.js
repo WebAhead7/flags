@@ -1,8 +1,8 @@
-
+const small = document.querySelector('small');
 
 const flagsObj = {
     'CANADA': 'img/CANADA.jpg',
-    'UNITEDSTATES': 'img/UNITEDSTATES.jpg',
+    'UNITED STATES': 'img/UNITEDSTATES.jpg',
     'TURKEY': 'img/TURKEY.jpg',
     'ISRAEL': 'img/ISRAEL.jpg',
     'ITALY': 'img/ITALY.jpg',
@@ -87,11 +87,16 @@ function submitMe() {
             level++;
             score+=correctAnswer;
             setCountry();
-
+            small.classList.remove('failed');
+            small.classList.add('pass');
+            small.innerText = 'Correct answer :)';
+    
         } else {
             score+=wrongAnswer;
-            alert('Wrong !! Try Again ');
-
+            small.classList.remove('pass');
+            small.classList.add('failed');
+            small.innerText = 'nope';
+    
         }
     }
 

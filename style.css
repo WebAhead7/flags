@@ -2,10 +2,15 @@
     text-decoration-line: none;
 }
 
+body {
+    background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+    min-height: 100vh;
+}
+
 header {
-    background-color: #fff;
+    /* background-color: #fff; */
     /* white */
-    width: 100%;
+    /* width: 100%; */
     height: 100px;
 }
 
@@ -67,17 +72,17 @@ header nav ul li a {
     }
 }
 
-
 /* INDEX */
 
 .index-banner {
     width: 100%;
     /* height: 100vh; /* view height (dont include the header)  */
     height: calc(100vh - 100px);
-    background-image: url('img/background.svg');
+    /* background-image: url('img/backgrnd.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+     */
     /* cover the entire banner, not matter the height or the width */
     display: table;
     /* Add the blur effect
@@ -100,9 +105,10 @@ header nav ul li a {
     /* mix-blend-mode: difference; */
     text-align: center;
     text-shadow: 2px 2px 8px #111;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
 }
 
 .index-banner h1 {
@@ -115,18 +121,23 @@ header nav ul li a {
     text-align: center;
     text-shadow: 2px 2px 8px #111;
     line-height: 40px;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
 }
-
 
 @media only screen and (min-width: 1000px) {
     .wrapper {
         width: 1000px;
         margin: 0 auto;
     }
+    .centerit {
+        display: table-cell;
+        vertical-align: top;
+    }
     .index-banner {
-        height: 450px;
+        height: 100vh;
     }
     .index-banner h1 {
         display: block;
@@ -136,56 +147,101 @@ header nav ul li a {
     .index-banner h2 {
         width: 700px;
         margin: 0 auto;
-
-    }
-
-    .index-links div {
-        margin: 20px 10px 0;
-        height: 230px;
-        background-color: #f2f2f2;
-        float: left;
-    }
-    .index-links div h3 {
-        line-height: 230px;
     }
 }
 
 /* submit */
 
 .container {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flexdisplay {
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    /* -webkit-animation-duration: 6s; */
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    /* animation-duration: 6s; */
+}
+
+.container h1 {
+    font-size: 50px;
+    margin: 0px;
+}
+
+.container h2 {
+    font-size: 30px;
+    margin: 0px;
+}
+
+button {
+    font-family: 'Secular One', sans-serif;
+    font-size: 25px;
+}
+
+.container .buttonstart {
+    padding: 10px 40px;
+    margin: 10px;
+    width: 20%;
+    height: 20%;
+    color: #fff;
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(62, 40, 45, 1) 100%);
+}
+
+
+
+.container .buttonskip {
+    padding: 10px 40px;
+    margin: 10px;
+    width: 20%;
+    height: 20%;
+    color: #fff;
+    background: rgb(173, 63, 251);
+    background: radial-gradient(circle, rgba(173, 63, 251, 0.9192051820728291) 0%, rgba(25, 2, 7, 1) 100%);
+}
+
+.container img {
+    /* width: 250px; */
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 250px;
+}
+
+.flexdisplay {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  label {
+}
+
+label {
     color: #fff;
     margin-bottom: 20px;
-  }
-  
-  button {
+}
+
+button {
     margin-top: 20px;
     padding: 10px 25px;
     background-color: #fff;
-  }
-  
-  small {
+}
+
+small {
     color: #fff;
-  }
-  
-  .failed {
+}
+
+.failed {
     color: red;
-  }
-  
-  .pass {
-    color: green;
-  }
+    font-size: 30px;
+    mix-blend-mode: difference;
+    text-shadow: 2px 2px 8px #111;
+}
+
+.pass {
+    color: lightgreen;
+    font-size: 30px;
+    text-shadow: 2px 2px 8px #111;
+}
