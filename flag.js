@@ -25,15 +25,24 @@ input.style.display = 'none';
 var submit = document.getElementById("submit");
 let myObjKeys = Object.keys(flagsObj);
 
-var levelText = document.getElementById("level");
-levelText.style.display = 'none';
+var scoreText = document.getElementById("score");
+scoreText.style.display = 'none';
 
+
+var skipperButton = document.getElementById("skipper");
+skipperButton.style.display = 'none';
+
+var userNameInout = document.getElementById("username");
 
 submit.addEventListener("click", submitMe);
+skipperButton.addEventListener("click",skipQuestion);
 
-
+var score = 0 ;
 var level = 0;
 var countryName = '';
+var wrongAnswer = -5 ;
+var correctAnswer = 10 ;
+var userName = '';
 
 
 
@@ -42,12 +51,13 @@ function setCountry() {
     if (level == myObjKeys.length) {
 
 
-        alert(' WOOOOW You Have Finished The Game ');
+        var queryString = "?score=" + score + "&userName=" + userName;
+        window.location.href = "endgame.html" + queryString;
 
     } else {
 
 
-        levelText.textContent = " Level : " + (level + 1);
+        scoreText.textContent = " Your Score : " + (score);
 
         countryName = myObjKeys[level];
         var srcImg = flagsObj[countryName];
@@ -62,20 +72,30 @@ function submitMe() {
     if (submit.textContent === 'Start game') {
         submit.textContent = 'Submit';
         input.style.display = 'block';
-        levelText.style.display = 'block';
+        scoreText.style.display = 'block';
+        skipperButton.style.display= 'block';
+        userNameInout.style.display = 'none';
+        userName=userNameInout.textContent;
         setCountry();
 
     } else {
         if (input.value.toLowerCase() === countryName.toLowerCase()) {
             level++;
+            score+=correctAnswer;
             setCountry();
 
         } else {
+            score+=wrongAnswer;
             alert('Wrong !! Try Again ');
 
         }
     }
 
-
+    scoreText.textContent = " Your Score : " + (score);
     input.value = '';
+}
+
+function skipQuestion(){
+    level++;
+    setCountry();
 }
