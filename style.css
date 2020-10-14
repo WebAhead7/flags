@@ -235,7 +235,6 @@ small {
 
 .failed {
     color: red;
-<<<<<<< HEAD
     font-size: 30px;
     mix-blend-mode: difference;
     text-shadow: 2px 2px 8px #111;
@@ -245,10 +244,4 @@ small {
     color: lightgreen;
     font-size: 30px;
     text-shadow: 2px 2px 8px #111;
-=======
-}
-
-.pass {
-    color: green;
->>>>>>> a404eaa360996edd8e8e347060df3d1b4300630e
 }
