@@ -45,7 +45,7 @@ function sound(src) {
 
 
 
-
+console.log("here");
 var imgflag = document.getElementById("imgflag");
 var input = document.getElementById("inputAnswer");
 input.style.display = 'none';
