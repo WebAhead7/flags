@@ -175,6 +175,12 @@ header nav ul li a {
     font-size: 30px;
     margin: 0px;
 }
+.container h3 {
+    font-size: 40px;
+    margin: 0px;
+    font-family: 'Cormorant Garamond', serif;
+
+}
 
 button {
     font-family: 'Secular One', sans-serif;
