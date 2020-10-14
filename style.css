@@ -18,7 +18,7 @@ header .header-brand {
     text-transform: uppercase;
     display: block;
     /*making it a block will make it easier to style afterwards*/
-    margin: 0 auto;
+    margin: 0px auto;
     text-align: center;
     padding: 20px 0;
 }
@@ -54,7 +54,7 @@ header nav ul li a {
         line-height: 30px;
         padding: 0 20px 0px 40px;
         border-right: 3px solid #111;
-        float: left;
+        /* float: left; */
     }
     header nav ul {
         margin: 25px 0px 0px 20px;
@@ -66,7 +66,6 @@ header nav ul li a {
         line-height: 50px;
     }
 }
-
 
 /* INDEX */
 
@@ -100,9 +99,10 @@ header nav ul li a {
     /* mix-blend-mode: difference; */
     text-align: center;
     text-shadow: 2px 2px 8px #111;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
 }
 
 .index-banner h1 {
@@ -115,10 +115,11 @@ header nav ul li a {
     text-align: center;
     text-shadow: 2px 2px 8px #111;
     line-height: 40px;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
 }
-
 
 @media only screen and (min-width: 1000px) {
     .wrapper {
@@ -136,9 +137,7 @@ header nav ul li a {
     .index-banner h2 {
         width: 700px;
         margin: 0 auto;
-
     }
-
     .index-links div {
         margin: 20px 10px 0;
         height: 230px;
@@ -158,34 +157,34 @@ header nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flexdisplay {
+}
+
+.flexdisplay {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  label {
+}
+
+label {
     color: #fff;
     margin-bottom: 20px;
-  }
-  
-  button {
+}
+
+button {
     margin-top: 20px;
     padding: 10px 25px;
     background-color: #fff;
-  }
-  
-  small {
+}
+
+small {
     color: #fff;
-  }
-  
-  .failed {
+}
+
+.failed {
     color: red;
-  }
-  
-  .pass {
+}
+
+.pass {
     color: green;
-  }
+}
