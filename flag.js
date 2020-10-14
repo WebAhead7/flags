@@ -2,21 +2,25 @@
 
 const flagsObj = {
     'CANADA': 'img/CANADA.jpg',
-    'CHILE': 'img/CHILE.jpg',
+    'UNITEDSTATES': 'img/UNITEDSTATES.jpg',
+    'TURKEY': 'img/TURKEY.jpg',
+    'ISRAEL': 'img/ISRAEL.jpg',
+    'ITALY': 'img/ITALY.jpg',
+    // 'CHILE': 'img/CHILE.jpg',
+    // 'NEW ZEALAND': 'img/NEWZEALAND.jpg',
+    // 'MACAU': 'img/MACAU.jpg',
+    // 'YEMEN': 'img/YEMEN.jpg',
     // 'CHINA': 'img/CHINA.jpg',
+    // 'IRAQ': 'img/IRAQ.jpg',
     // 'COLOMBIA': 'img/COLOMBIA.jpg',
     // 'EGYPT': 'img/EGYPT.jpg',
     // 'IRAN': 'img/IRAN.jpg',
-    // 'ISRAEL': 'img/ISRAEL.jpg',
-    // 'ITALY': 'img/ITALY.jpg',
     // 'JAPAN': 'img/JAPAN.jpg',
     // 'JORDAN': 'img/JORDAN.jpg',
     // 'LEBANON': 'img/LEBANON.jpg',
     // 'SAUDI ARABIA': 'img/SAUDIARABIA.jpg',
     // 'SPAIN': 'img/SPAIN.jpg',
-    // 'SUDAN': 'img/SUDAN.jpg',
-    // 'TURKEY': 'img/TURKEY.jpg',
-    // 'UNITEDSTATES': 'img/UNITEDSTATES.jpg'
+    // 'SUDAN': 'img/SUDAN.jpg'
 }
 
 var imgflag = document.getElementById("imgflag");
