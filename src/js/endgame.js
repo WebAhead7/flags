@@ -28,7 +28,7 @@ function setting(msg, gf) {
     correctanswers.textContent = obj.numberCorrectAnswers;
 
     message.textContent = msg;
-    gif.setAttribute('src',"img/"+ gf)
+    gif.setAttribute('src',"../../img/"+ gf)
 
 }
 

@@ -81,7 +81,7 @@ function setCountry() {
 
         var queryString = "?score=" + score + "&userName=" + userName +"&numberCorrectAnswers="+numberCorrectAnswers;
         console.log(queryString);
-        window.location.href = "endgame.html" + queryString;
+        window.location.href = "src/html/endgame.html" + queryString;
 
     } else {
 
