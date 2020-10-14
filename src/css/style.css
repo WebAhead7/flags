@@ -10,8 +10,8 @@ body {
 header {
     /* background-color: #fff; */
     /* white */
-    /* width: 100%; */
-    height: 100px;
+    width: 100%;
+    /* height: 100px; */
 }
 
 header .header-brand {
@@ -24,6 +24,8 @@ header .header-brand {
     display: block;
     /*making it a block will make it easier to style afterwards*/
     margin: 0px auto;
+    float: center;
+
     text-align: center;
     padding: 20px 0;
 }
@@ -36,10 +38,11 @@ header nav ul {
 
 header nav ul li {
     display: inline-block;
-    float: left;
     /* float here gits rid of the gaps between the links*/
     list-style: none;
     /* no bullet points */
+    text-align: left;
+
     padding: 0px 16px;
 }
 
@@ -51,30 +54,27 @@ header nav ul li a {
     text-transform: uppercase;
 }
 
-/* /* @media only screen and (min-width: 1000px) {  */
-
-header .header-brand {
-    margin: 35px 0;
-    /* header 100px height, subtract line-height, and divide by half to center it*/
-    text-align: left;
-    line-height: 30px;
-    padding: 0 20px 0px 40px;
-    border-right: 3px solid #111;
-    float: left;
-}
-
-header nav ul {
-    margin: 25px 0px 0px 20px;
-    /* 25px because i chose line-height: 50px; below at 'li a'
+@media only screen and (min-width: 590px) {
+    header .header-brand {
+        margin: 35px 0;
+        /* header 100px height, subtract line-height, and divide by half to center it*/
+        text-align: left;
+        line-height: 30px;
+        padding: 0 20px 0px 40px;
+        border-right: 3px solid #111;
+        float: left;
+    }
+    header nav ul {
+        margin: 25px 0px 0px 20px;
+        /* 25px because i chose line-height: 50px; below at 'li a'
         100px-50px=50px/2=25px #centered */
-    float: right;
+        float: right;
+    }
+    header nav ul li a {
+        line-height: 50px;
+    }
 }
 
-header nav ul li a {
-    line-height: 50px;
-}
-
-/* } 
 
 /* INDEX */
 
@@ -92,11 +92,13 @@ header nav ul li a {
     /* Add the blur effect
     filter: blur(1px);
     -webkit-filter: blur(1px); */
+    
 }
 
 .centerit .container {
     display: table-cell;
     vertical-align: middle;
+    
 }
 
 .index-banner h2 {
@@ -116,7 +118,7 @@ header nav ul li a {
 }
 
 .index-banner h1 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Secular One', sans-serif;
     font-size: 28px;
     font-weight: 100;
     font-style: italic;
