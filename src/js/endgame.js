@@ -25,10 +25,10 @@ function setting(msg, gf) {
 
     score.textContent = obj.score;
     username.textContent = obj.userName;
-    correctanswers.textContent = obj.numberCorrectAnswers;
+    correctanswers.textContent = obj.numberCorrectAnswers + ' Out Of 20';
 
     message.textContent = msg;
-    gif.setAttribute('src',"img/"+ gf)
+    gif.setAttribute('src',"../../img/"+ gf)
 
 }
 
