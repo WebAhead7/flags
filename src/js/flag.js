@@ -79,6 +79,9 @@ var correctAnswer = 10;
 var userName = '';
 var numberCorrectAnswers = 0;
 
+const container = document.querySelector('.container');
+const levelPara = document.createElement('p');
+
 
 
 function setCountry() {
@@ -109,6 +112,9 @@ function submitMe() {
         submit.textContent = 'Submit';
         input.style.display = 'block';
         scoreText.style.display = 'block';
+        // levelPara.textContent = level + ' out of 20';
+        container.insertBefore(levelPara, container.children[3]);
+
 
         skipperButton.style.display = 'block';
         userName = userNameInout.value;
@@ -139,8 +145,15 @@ function submitMe() {
     }
 
     scoreText.textContent = " Your Score : " + (score);
+    levelPara.textContent = level + ' out of 20';
     input.value = '';
 }
+
+
+
+
+
+
 
 // Creating an input box  under the image  in//
 
@@ -165,4 +178,5 @@ function submitMe() {
 function skipQuestion() {
     level++;
     setCountry();
+    levelPara.textContent = level + ' out of 20';
 }

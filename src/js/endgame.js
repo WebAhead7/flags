@@ -69,13 +69,5 @@ else {
 }
 
 
-// output >> sending according to element's ID :::
-// id ='message'
-// id="score" for the score
-// id="username" for the username
-// id="correctanswers" for how many correct answers you did
-// 
-
-
 
 
