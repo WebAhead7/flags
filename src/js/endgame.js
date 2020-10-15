@@ -28,7 +28,7 @@ function setting(msg, gf) {
     correctanswers.textContent = obj.numberCorrectAnswers + ' out of 20';
 
     message.textContent = msg;
-    gif.setAttribute('src',"../../img/"+ gf)
+    gif.setAttribute('src', "../../img/" + gf)
 
 }
 
