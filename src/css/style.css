@@ -25,7 +25,6 @@ header .header-brand {
     /*making it a block will make it easier to style afterwards*/
     margin: 0px auto;
     float: center;
-
     text-align: center;
     padding: 20px 0;
 }
@@ -42,7 +41,6 @@ header nav ul li {
     list-style: none;
     /* no bullet points */
     text-align: left;
-
     padding: 0px 16px;
 }
 
@@ -75,7 +73,6 @@ header nav ul li a {
     }
 }
 
-
 /* INDEX */
 
 .index-banner {
@@ -92,13 +89,11 @@ header nav ul li a {
     /* Add the blur effect
     filter: blur(1px);
     -webkit-filter: blur(1px); */
-    
 }
 
 .centerit .container {
     display: table-cell;
     vertical-align: middle;
-    
 }
 
 .index-banner h2 {

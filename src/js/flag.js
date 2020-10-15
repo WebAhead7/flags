@@ -23,17 +23,17 @@ const flagsObj = {
     'SUDAN': 'img/SUDAN.jpg',
 };
 
-var correctSound =  sound("sounds/correctsound.mp3");
-var wrongSound =  sound("sounds/wrongsound.mp3");
+var correctSound = sound("sounds/correctsound.mp3");
+var wrongSound = sound("sounds/wrongsound.mp3");
 
 function sound(src) {
-   var sound1 = document.createElement("audio");
-   sound1.src = src;
-   sound1.setAttribute("preload", "auto");
+    var sound1 = document.createElement("audio");
+    sound1.src = src;
+    sound1.setAttribute("preload", "auto");
     sound1.setAttribute("controls", "none");
     sound1.style.display = "none";
-     document.body.appendChild(sound1);
-   return sound1;
+    document.body.appendChild(sound1);
+    return sound1;
 }
 
 
@@ -44,10 +44,10 @@ var input = document.getElementById("inputAnswer");
 input.addEventListener(
     "keypress",
     (e) => {
-      if (e.key === "Enter") {
-          submitMe();
-      }
-      });
+        if (e.key === "Enter") {
+            submitMe();
+        }
+    });
 input.style.display = 'none';
 var submit = document.getElementById("submit");
 let myObjKeys = Object.keys(flagsObj);
@@ -63,10 +63,10 @@ var userNameInout = document.getElementById("username");
 userNameInout.addEventListener(
     "keypress",
     (e) => {
-      if (e.key === "Enter") {
-          submitMe();
-      }
-      });
+        if (e.key === "Enter") {
+            submitMe();
+        }
+    });
 
 submit.addEventListener("click", submitMe);
 skipperButton.addEventListener("click", skipQuestion);
@@ -133,7 +133,7 @@ function submitMe() {
             score += wrongAnswer;
             small.classList.remove('pass');
             small.classList.add('failed');
-            small.innerText = 'Wrong Answer :(' ;
+            small.innerText = 'Wrong Answer :(';
 
         }
     }
