@@ -76,7 +76,7 @@ submit.addEventListener("click", submitMe);
 skipperButton.addEventListener("click", skipQuestion);
 
 var score = 0;
-var level = 1;
+var level = 0;
 var countryName = '';
 var wrongAnswer = -5;
 var correctAnswer = 10;
@@ -86,11 +86,27 @@ var numberCorrectAnswers = 0;
 const container = document.querySelector('.container');
 const levelPara = document.createElement('p');
 
+var arrayOfRndm = [];
+
+
+arrayOfRndm.push(value);
+
+function getQuestion(){
+   var rndm = Math.floor(Math.random() * (myObjKeys.length));
+   if(arrayOfRndm.includes(rndm)){
+    return getQuestion();
+   }else{
+   arrayOfRndm.push(rndm);
+   return myObjKeys[rndm];
+   }
+}
+
 
 
 function setCountry() {
 
-    if ((level - 1) == myObjKeys.length) {
+    small.innerText = '';
+    if ((level ) == myObjKeys.length) {
         var queryString = "?score=" + score + "&userName=" + userName + "&numberCorrectAnswers=" + numberCorrectAnswers;
         console.log(queryString);
         window.location.href = "src/html/endgame.html" + queryString;
@@ -100,13 +116,17 @@ function setCountry() {
 
         scoreText.textContent = " Your Score : " + (score);
 
-        countryName = myObjKeys[level - 1];
+        countryName = getQuestion();
         var srcImg = flagsObj[countryName];
         imgflag.src = srcImg;
 
 
     }
-    levelText.textContent = "Level: " + (level) + " out of 20!";
+    if(level==20){
+        levelText.textContent = "Level: " + (level) + " out of 20!";
+    }else{
+    levelText.textContent = "Level: " + (level+1) + " out of 20!";
+    }
 
 }
 
@@ -126,8 +146,10 @@ function submitMe() {
 
     } else {
         if (input.value.toLowerCase() === countryName.toLowerCase()) {
+            
             level++;
-
+            
+            
             score += correctAnswer;
             numberCorrectAnswers++;
             correctSound.play();
@@ -147,7 +169,9 @@ function submitMe() {
     }
 
     scoreText.textContent = "Your Score: " + (score);
-    levelText.textContent = "Level: " + (level) + " out of 20!";
+   
+    levelText.textContent = "Level: " + (level+1) + " out of 20!";
+    
     input.value = '';
 }
 
@@ -180,5 +204,5 @@ function submitMe() {
 function skipQuestion() {
     level++;
     setCountry();
-    levelPara.textContent = level + ' out of 20';
+   
 }
