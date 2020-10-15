@@ -6,27 +6,25 @@ const flagsObj = {
     'TURKEY': 'img/TURKEY.jpg',
     'ISRAEL': 'img/ISRAEL.jpg',
     'ITALY': 'img/ITALY.jpg',
-     'CHILE': 'img/CHILE.jpg',
-     'NEW ZEALAND': 'img/NEWZEALAND.jpg',
-     'MACAU': 'img/MACAU.jpg',
-     'YEMEN': 'img/YEMEN.jpg',
-     'CHINA': 'img/CHINA.jpg',
-     'IRAQ': 'img/IRAQ.jpg',
-     'COLOMBIA': 'img/COLOMBIA.jpg',
-     'EGYPT': 'img/EGYPT.jpg',
-     'IRAN': 'img/IRAN.jpg',
-     'JAPAN': 'img/JAPAN.jpg',
-     'JORDAN': 'img/JORDAN.jpg',
-     'LEBANON': 'img/LEBANON.jpg',
-     'SAUDI ARABIA': 'img/SAUDIARABIA.jpg',
-     'SPAIN': 'img/SPAIN.jpg',
-     'SUDAN': 'img/SUDAN.jpg',
-     'TURKEY': 'img/TURKEY.jpg',
-     'UNITEDSTATES': 'img/UNITEDSTATES.jpg'
+    'CHILE': 'img/CHILE.jpg',
+    'NEW ZEALAND': 'img/NEWZEALAND.jpg',
+    'MACAU': 'img/MACAU.jpg',
+    'YEMEN': 'img/YEMEN.jpg',
+    'CHINA': 'img/CHINA.jpg',
+    'IRAQ': 'img/IRAQ.jpg',
+    'COLOMBIA': 'img/COLOMBIA.jpg',
+    'EGYPT': 'img/EGYPT.jpg',
+    'IRAN': 'img/IRAN.jpg',
+    'JAPAN': 'img/JAPAN.jpg',
+    'JORDAN': 'img/JORDAN.jpg',
+    'LEBANON': 'img/LEBANON.jpg',
+    'SAUDI ARABIA': 'img/SAUDIARABIA.jpg',
+    'SPAIN': 'img/SPAIN.jpg',
+    'SUDAN': 'img/SUDAN.jpg',
 };
 
 var correctSound = new sound("sounds/correctsound.mp3");
-var wrongSound= new sound("sounds/wrongsound.mp3");
+var wrongSound = new sound("sounds/wrongsound.mp3");
 
 function sound(src) {
     this.sound = document.createElement("audio");
@@ -35,12 +33,12 @@ function sound(src) {
     this.sound.setAttribute("controls", "none");
     this.sound.style.display = "none";
     document.body.appendChild(this.sound);
-    this.play = function(){
+    this.play = function () {
         this.sound.play();
     }
-    this.stop = function(){
+    this.stop = function () {
         this.sound.pause();
-    }    
+    }
 }
 
 
@@ -70,7 +68,7 @@ var countryName = '';
 var wrongAnswer = -5;
 var correctAnswer = 10;
 var userName = '';
-var numberCorrectAnswers = 0 ;
+var numberCorrectAnswers = 0;
 
 
 
@@ -79,7 +77,7 @@ function setCountry() {
     if (level == myObjKeys.length) {
 
 
-        var queryString = "?score=" + score + "&userName=" + userName +"&numberCorrectAnswers="+numberCorrectAnswers;
+        var queryString = "?score=" + score + "&userName=" + userName + "&numberCorrectAnswers=" + numberCorrectAnswers;
         console.log(queryString);
         window.location.href = "src/html/endgame.html" + queryString;
 
@@ -103,8 +101,8 @@ function submitMe() {
         input.style.display = 'block';
         scoreText.style.display = 'block';
 
-        skipperButton.style.display= 'block';
-        userName=userNameInout.value;
+        skipperButton.style.display = 'block';
+        userName = userNameInout.value;
         userNameInout.style.display = 'none';
 
         setCountry();
@@ -113,21 +111,21 @@ function submitMe() {
         if (input.value.toLowerCase() === countryName.toLowerCase()) {
             level++;
 
-            score+=correctAnswer;
+            score += correctAnswer;
             numberCorrectAnswers++;
             correctSound.play();
             setCountry();
             small.classList.remove('failed');
             small.classList.add('pass');
             small.innerText = 'Correct answer :)';
-    
+
         } else {
             wrongSound.play();
-            score+=wrongAnswer;
+            score += wrongAnswer;
             small.classList.remove('pass');
             small.classList.add('failed');
             small.innerText = 'nope';
-    
+
         }
     }
 
