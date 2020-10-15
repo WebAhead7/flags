@@ -28,7 +28,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="center">
-  <img src="https://github.com/WebAhead7/flags/blob/main/img/screenshot.PNG" width="1000" height="428" />
+  <img src="https://github.com/WebAhead7/flags/blob/main/img/screenshot.PNG" width="900" height="430" />
 </p>
 Guess the Country Flags using a single picture!
 
