@@ -23,29 +23,31 @@ const flagsObj = {
     'SUDAN': 'img/SUDAN.jpg',
 };
 
-var correctSound = new sound("sounds/correctsound.mp3");
-var wrongSound = new sound("sounds/wrongsound.mp3");
+var correctSound =  sound("sounds/correctsound.mp3");
+var wrongSound =  sound("sounds/wrongsound.mp3");
 
 function sound(src) {
-    this.sound = document.createElement("audio");
-    this.sound.src = src;
-    this.sound.setAttribute("preload", "auto");
-    this.sound.setAttribute("controls", "none");
-    this.sound.style.display = "none";
-    document.body.appendChild(this.sound);
-    this.play = function () {
-        this.sound.play();
-    }
-    this.stop = function () {
-        this.sound.pause();
-    }
+   var sound1 = document.createElement("audio");
+   sound1.src = src;
+   sound1.setAttribute("preload", "auto");
+    sound1.setAttribute("controls", "none");
+    sound1.style.display = "none";
+     document.body.appendChild(sound1);
+   return sound1;
 }
 
 
 
-console.log("here");
+
 var imgflag = document.getElementById("imgflag");
 var input = document.getElementById("inputAnswer");
+input.addEventListener(
+    "keypress",
+    (e) => {
+      if (e.key === "Enter") {
+          submitMe();
+      }
+      });
 input.style.display = 'none';
 var submit = document.getElementById("submit");
 let myObjKeys = Object.keys(flagsObj);
@@ -58,6 +60,13 @@ var skipperButton = document.getElementById("skipper");
 skipperButton.style.display = 'none';
 
 var userNameInout = document.getElementById("username");
+userNameInout.addEventListener(
+    "keypress",
+    (e) => {
+      if (e.key === "Enter") {
+          submitMe();
+      }
+      });
 
 submit.addEventListener("click", submitMe);
 skipperButton.addEventListener("click", skipQuestion);
@@ -117,14 +126,14 @@ function submitMe() {
             setCountry();
             small.classList.remove('failed');
             small.classList.add('pass');
-            small.innerText = 'Correct answer :)';
+            small.innerText = 'Correct Answer :)';
 
         } else {
             wrongSound.play();
             score += wrongAnswer;
             small.classList.remove('pass');
             small.classList.add('failed');
-            small.innerText = 'nope';
+            small.innerText = 'Wrong Answer :(' ;
 
         }
     }
