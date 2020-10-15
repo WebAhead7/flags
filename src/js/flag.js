@@ -83,11 +83,14 @@ var correctAnswer = 10;
 var userName = '';
 var numberCorrectAnswers = 0;
 
+const container = document.querySelector('.container');
+const levelPara = document.createElement('p');
+
 
 
 function setCountry() {
 
-    if ((level-1) == myObjKeys.length) {
+    if ((level - 1) == myObjKeys.length) {
         var queryString = "?score=" + score + "&userName=" + userName + "&numberCorrectAnswers=" + numberCorrectAnswers;
         console.log(queryString);
         window.location.href = "src/html/endgame.html" + queryString;
@@ -97,7 +100,7 @@ function setCountry() {
 
         scoreText.textContent = " Your Score : " + (score);
 
-        countryName = myObjKeys[level-1];
+        countryName = myObjKeys[level - 1];
         var srcImg = flagsObj[countryName];
         imgflag.src = srcImg;
 
@@ -142,11 +145,17 @@ function submitMe() {
 
         }
     }
-    
+
     scoreText.textContent = "Your Score: " + (score);
     levelText.textContent = "Level: " + (level) + " out of 20!";
     input.value = '';
 }
+
+
+
+
+
+
 
 // Creating an input box  under the image  in//
 
@@ -171,4 +180,5 @@ function submitMe() {
 function skipQuestion() {
     level++;
     setCountry();
+    levelPara.textContent = level + ' out of 20';
 }
