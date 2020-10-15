@@ -35,11 +35,11 @@ Guess the Country Flags using a single picture!
 CHALLENGE YOUR FLAG KNOWLEDGE!
 Test your skills and find out how many country flags you can identify!
 
-INCLUDES US STATES
-See how many US state flags you guess!
+INCLUDES COUNTRIES FROM AROUND THE WORLD 
+See how many flags you guess!
 
 LOVE QUIZZES?
-Featuring over 300 Flags from all over the World! – Can you guess them all?
+Featuring over 300 Flags from all over the World! – Can you guess them all? (coming soon)
 
 ## Built With
 * HTML
