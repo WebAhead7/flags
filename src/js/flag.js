@@ -27,17 +27,17 @@ var correctSound = new sound("sounds/correctsound.mp3");
 var wrongSound = new sound("sounds/wrongsound.mp3");
 
 function sound(src) {
-    this.sound = document.createElement("audio");
-    this.sound.src = src;
-    this.sound.setAttribute("preload", "auto");
-    this.sound.setAttribute("controls", "none");
-    this.sound.style.display = "none";
+    sound = document.createElement("audio");
+    sound.src = src;
+    sound.setAttribute("preload", "auto");
+    sound.setAttribute("controls", "none");
+    sound.style.display = "none";
     document.body.appendChild(this.sound);
-    this.play = function () {
-        this.sound.play();
+    play = function () {
+        sound.play();
     }
-    this.stop = function () {
-        this.sound.pause();
+    stop = function () {
+        sound.pause();
     }
 }
 
